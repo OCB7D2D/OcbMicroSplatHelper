@@ -1,0 +1,11 @@
+﻿<configs>
+	<append xpath="/xui/ruleset[@name='default']">
+		<window_group name="msplatLayerCfg" actionSet="false" controller="XUiC_MicroSplatLayerCfg, MicroSplatHelper">
+			<window name="windowMicroSplatLayer"/>
+		</window_group>
+
+		<window_group name="msplatShaderCfg" actionSet="false" controller="XUiC_MicroSplatShaderCfg, MicroSplatHelper">
+			<window name="windowMicroSplatShader"/>
+		</window_group>
+	</append>
+</configs>

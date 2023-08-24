@@ -1,0 +1,149 @@
+﻿<configs>
+	<append xpath="/windows">
+		<window name="windowMicroSplatShader" anchor="RightCenter" visible="true" normal_color="[iconColor]" cursor_area="true">
+			<rect pos="-640,530">
+				<sprite depth="1" name="background" color="[darkGrey]" type="sliced" pos="-340,10" width="710" height="148"/>
+
+				<label text="Biome Curve Weight:" width="320" height="30" pos="-320,0"/>
+				<combobox name="uiProcBiomeCurveWeight" type="ComboBoxFloat" width="180" height="30" pos="80,0" value_increment="0.001" value_min="0" value_max="1" value_wrap="false" format_string="0.000"/>
+
+				<label text="Triplanar Contrast:" width="320" height="30" pos="-320,-34"/>
+				<!-- Usefull range seems to be from 1 to 8 according to shader settings -->
+				<combobox name="uiTriplanarContrast" type="ComboBoxFloat" width="180" height="30" pos="80,-34" value_increment="0.001" value_min="-15" value_max="15" value_wrap="false" format_string="0.000"/>
+
+				<label text="Noise Height (freq/amp):" width="320" height="30" pos="-320,-68"/>
+				<combobox name="uiNoiseHeightDataFreq" type="ComboBoxFloat" width="180" height="30" pos="0,-68" value_increment="0.001" value_min="-2" value_max="2" value_wrap="false" format_string="0.000"/>
+				<combobox name="uiNoiseHeightDataAmp" type="ComboBoxFloat" width="180" height="30" pos="180,-68" value_increment="0.001" value_min="-2" value_max="2" value_wrap="false" format_string="0.000"/>
+
+				<label text="Height Range (min/max):" width="230" height="30" pos="-320,-102"/>
+				<combobox name="uiWorldHeightRangeMin" type="ComboBoxFloat" width="180" height="30" pos="0,-102" value_increment="0.1" value_min="0" value_max="500" value_wrap="false" format_string="0.0"/>
+				<combobox name="uiWorldHeightRangeMax" type="ComboBoxFloat" width="180" height="30" pos="180,-102" value_increment="0.1" value_min="0" value_max="500" value_wrap="false" format_string="0.0"/>
+			</rect>
+
+			<rect pos="-640,380">
+				<sprite depth="1" name="background" color="[darkGrey]" type="sliced" pos="-340,10" width="710" height="148"/>
+
+				<label text="Detail Noise (scale/strength/dist):" width="320" height="30" pos="-320,-0"/>
+				<combobox name="uiDetailNoiseScale" type="ComboBoxFloat" width="120" height="30" pos="0,-0" value_increment="0.01" value_min="-4" value_max="8" value_wrap="false" format_string="0.00"/>
+				<combobox name="uiDetailNoiseStrength" type="ComboBoxFloat" width="120" height="30" pos="120,-0" value_increment="0.001" value_min="0" value_max="3" value_wrap="false" format_string="0.000"/>
+				<combobox name="uiDetailNoiseFadeDist" type="ComboBoxFloat" width="120" height="30" pos="240,-0" value_increment="0.1" value_min="0" value_max="500" value_wrap="false" format_string="0.0"/>
+
+				<label text="Normal Noise 1 (scale/strength):" width="320" height="30" pos="-320,-34"/>
+				<combobox name="uiNoiseNormal1ParamScale" type="ComboBoxFloat" width="180" height="30" pos="0,-34" value_increment="0.001" value_min="0" value_max="2" value_wrap="false" format_string="0.000"/>
+				<combobox name="uiNoiseNormal1ParamStrength" type="ComboBoxFloat" width="180" height="30" pos="180,-34" value_increment="0.001" value_min="0" value_max="2" value_wrap="false" format_string="0.000"/>
+
+				<label text="Normal Noise 2 (scale/strength):" width="320" height="30" pos="-320,-68"/>
+				<combobox name="uiNoiseNormal2ParamScale" type="ComboBoxFloat" width="180" height="30" pos="0,-68" value_increment="0.001" value_min="0" value_max="2" value_wrap="false" format_string="0.000"/>
+				<combobox name="uiNoiseNormal2ParamStrength" type="ComboBoxFloat" width="180" height="30" pos="180,-68" value_increment="0.001" value_min="0" value_max="2" value_wrap="false" format_string="0.000"/>
+
+				<label text="Normal Noise 3 (scale/strength):" width="320" height="30" pos="-320,-102"/>
+				<combobox name="uiNoiseNormal3ParamScale" type="ComboBoxFloat" width="180" height="30" pos="0,-102" value_increment="0.001" value_min="0" value_max="2" value_wrap="false" format_string="0.000"/>
+				<combobox name="uiNoiseNormal3ParamStrength" type="ComboBoxFloat" width="180" height="30" pos="180,-102" value_increment="0.001" value_min="0" value_max="2" value_wrap="false" format_string="0.000"/>
+			</rect>
+
+			<rect pos="-640,230">
+				<sprite depth="1" name="background" color="[darkGrey]" type="sliced" pos="-340,10" width="710" height="216"/>
+
+				<label text="Distant Resample Albedo:" width="320" height="30" pos="-320,-0"/>
+				<combobox name="uiDistanceResampleAlbedoStrength" type="ComboBoxFloat" width="180" height="30" pos="80,-0" value_increment="0.001" value_min="0" value_max="2" value_wrap="false" format_string="0.000"/>
+
+				<label text="Distant Resample Normal:" width="320" height="30" pos="-320,-34"/>
+				<combobox name="uiDistanceResampleNormalStrength" type="ComboBoxFloat" width="180" height="30" pos="80,-34" value_increment="0.001" value_min="0" value_max="2" value_wrap="false" format_string="0.000"/>
+
+				<label text="Distant Resample Material:" width="320" height="30" pos="-320,-68"/>
+				<combobox name="uiDistanceResampleMaterialStrength" type="ComboBoxFloat" width="180" height="30" pos="80,-68" value_increment="0.001" value_min="0" value_max="2" value_wrap="false" format_string="0.000"/>
+
+				<label text="Dist Resample (scale/begin/end):" width="320" height="30" pos="-320,-102"/>
+				<combobox name="uiResampleDistanceUvScale" type="ComboBoxFloat" width="120" height="30" pos="0,-102" value_increment="0.001" value_min="0" value_max="2" value_wrap="false" format_string="0.00"/>
+				<combobox name="uiResampleDistanceBegin" type="ComboBoxFloat" width="120" height="30" pos="120,-102" value_increment="0.1" value_min="0" value_max="500" value_wrap="false" format_string="0.0"/>
+				<combobox name="uiResampleDistanceEnd" type="ComboBoxFloat" width="120" height="30" pos="240,-102" value_increment="0.1" value_min="0" value_max="500" value_wrap="false" format_string="0.0"/>
+
+				<label text="Distance Noise (scale/strength):" width="320" height="30" pos="-320,-136"/>
+				<combobox name="uiDistanceNoiseScale" type="ComboBoxFloat" width="180" height="30" pos="0,-136" value_increment="0.01" value_min="-4" value_max="8" value_wrap="false" format_string="0.00"/>
+				<combobox name="uiDistanceNoiseStrength" type="ComboBoxFloat" width="180" height="30" pos="180,-136" value_increment="0.001" value_min="0" value_max="3" value_wrap="false" format_string="0.000"/>
+
+				<label text="Distance Noise (fade start/end):" width="320" height="30" pos="-320,-170"/>
+				<combobox name="uiDistanceNoiseFadeStart" type="ComboBoxFloat" width="180" height="30" pos="0,-170" value_increment="0.1" value_min="0" value_max="500" value_wrap="false" format_string="0.0"/>
+				<combobox name="uiDistanceNoiseFadeEnd" type="ComboBoxFloat" width="180" height="30" pos="180,-170" value_increment="0.1" value_min="0" value_max="500" value_wrap="false" format_string="0.0"/>
+			</rect>
+			<rect pos="-640,10">
+				<sprite depth="1" name="background" color="[darkGrey]" type="sliced" pos="-340,10" width="710" height="80"/>
+
+				<label text="UV Scale:" width="320" height="30" pos="-320,-0"/>
+				<combobox name="uiTriplanarUVScaleX" type="ComboBoxFloat" width="180" height="30" pos="0,-0" value_increment="0.01" value_min="-4" value_max="8" value_wrap="false" format_string="0.00"/>
+				<combobox name="uiTriplanarUVScaleY" type="ComboBoxFloat" width="180" height="30" pos="180,-0" value_increment="0.01" value_min="-4" value_max="8" value_wrap="false" format_string="0.00"/>
+
+				<label text="UV Offset:" width="320" height="30" pos="-320,-34"/>
+				<combobox name="uiTriplanarUvOffsetX" type="ComboBoxFloat" width="180" height="30" pos="0,-34" value_increment="0.001" value_min="0" value_max="1" value_wrap="false" format_string="0.000"/>
+				<combobox name="uiTriplanarUvOffsetY" type="ComboBoxFloat" width="180" height="30" pos="180,-34" value_increment="0.001" value_min="0" value_max="1" value_wrap="false" format_string="0.000"/>
+			</rect>
+		</window>
+
+		<window name="windowMicroSplatLayer" width="629" height="805" anchor="LeftCenter" visible="true" normal_color="[iconColor]" cursor_area="true">
+			<rect pos="4,330">
+				<combobox name="cbxBiome" width="200" type="ComboBoxEnum`1[[MicroSplatHelper+Biome,MicroSplatHelper]]" pos="0,0"/>
+			</rect>
+
+			<rect pos="4,300">
+				<label text="weight:" width="80" height="30" pos="4,-30"/>
+				<label text="noise:" width="80" height="30" pos="4,-60"/>
+				<label text="freq:" width="80" height="30" pos="4,-90"/>
+				<label text="offset:" width="80" height="30" pos="4,-120"/>
+				<label text="min:" width="80" height="30" pos="4,-150"/>
+				<label text="max:" width="80" height="30" pos="4,-180"/>
+				<label text="slope:" width="80" height="30" pos="4,-210"/>
+				<label text="1" width="20" height="30" pos="14,-240"/>
+				<label text="2" width="20" height="30" pos="14,-270"/>
+				<label text="3" width="20" height="30" pos="14,-300"/>
+				<label text="4" width="20" height="30" pos="14,-330"/>
+				<label text="height:" width="80" height="30" pos="4,-360"/>
+				<label text="1" width="20" height="30" pos="14,-390"/>
+				<label text="2" width="20" height="30" pos="14,-420"/>
+				<label text="3" width="20" height="30" pos="14,-450"/>
+				<label text="4" width="20" height="30" pos="14,-480"/>
+				<label text="texture:" width="80" height="30" pos="4,-510"/>
+				<label text="scale:" width="80" height="30" pos="4,-540"/>
+			</rect>
+
+			<grid name="queue" rows="1" cols="6" pos="84,300" cell_width="280" cell_height="600" repeat_content="true">
+				<rect controller="XUiC_MicroSplatLayer, MicroSplatHelper">
+					<combobox name="uiIndex" type="ComboBoxInt" width="200" height="30" pos="80,0" value_increment="1" value_min="0" value_max="23" value_wrap="false" format_string="0" enabled="false"/>
+
+					<combobox name="uiWeight" type="ComboBoxFloat" width="200" height="30" pos="80,-30" value_increment="0.001" value_min="0" value_max="2" value_wrap="false" format_string="0.000"/>
+
+					<combobox name="uiNoiseActive" type="ComboBoxBool" width="200" height="30" pos="80,-60"/>
+					<combobox name="uiNoiseFrequency" type="ComboBoxFloat" width="200" height="30" pos="80,-90" value_increment="0.001" value_min="0" value_max="50" value_wrap="false" format_string="0.000"/>
+					<combobox name="uiNoiseOffset" type="ComboBoxFloat" width="200" height="30" pos="80,-120" value_increment="0.001" value_min="0" value_max="1" value_wrap="false" format_string="0.000"/>
+					<combobox name="uiNoiseRangeMin" type="ComboBoxFloat" width="200" height="30" pos="80,-150" value_increment="0.001" value_min="-2" value_max="2" value_wrap="false" format_string="0.000"/>
+					<combobox name="uiNoiseRangeMax" type="ComboBoxFloat" width="200" height="30" pos="80,-180" value_increment="0.001" value_min="-2" value_max="2" value_wrap="false" format_string="0.000"/>
+
+					<combobox name="uiSlopeActive" type="ComboBoxEnum`1[[MicroSplatHelper+KeyFrames,MicroSplatHelper]]" width="200" height="30" pos="80,-210"/>
+					<combobox name="uiSlopeFrame1Time" type="ComboBoxFloat" width="130" height="30" pos="20,-240" value_increment="0.001" value_min="0" value_max="1" value_wrap="false" format_string="0.000"/>
+					<combobox name="uiSlopeFrame1Value" type="ComboBoxFloat" width="130" height="30" pos="150,-240" value_increment="0.001" value_min="0" value_max="1" value_wrap="false" format_string="0.000"/>
+					<combobox name="uiSlopeFrame2Time" type="ComboBoxFloat" width="130" height="30" pos="20,-270" value_increment="0.001" value_min="0" value_max="1" value_wrap="false" format_string="0.000"/>
+					<combobox name="uiSlopeFrame2Value" type="ComboBoxFloat" width="130" height="30" pos="150,-270" value_increment="0.001" value_min="0" value_max="1" value_wrap="false" format_string="0.000"/>
+					<combobox name="uiSlopeFrame3Time" type="ComboBoxFloat" width="130" height="30" pos="20,-300" value_increment="0.001" value_min="0" value_max="1" value_wrap="false" format_string="0.000"/>
+					<combobox name="uiSlopeFrame3Value" type="ComboBoxFloat" width="130" height="30" pos="150,-300" value_increment="0.001" value_min="0" value_max="1" value_wrap="false" format_string="0.000"/>
+					<combobox name="uiSlopeFrame4Time" type="ComboBoxFloat" width="130" height="30" pos="20,-330" value_increment="0.001" value_min="0" value_max="1" value_wrap="false" format_string="0.000"/>
+					<combobox name="uiSlopeFrame4Value" type="ComboBoxFloat" width="130" height="30" pos="150,-330" value_increment="0.001" value_min="0" value_max="1" value_wrap="false" format_string="0.000"/>
+
+					<combobox name="uiHeightActive" type="ComboBoxEnum`1[[MicroSplatHelper+KeyFrames,MicroSplatHelper]]" width="200" height="30" pos="80,-360"/>
+					<combobox name="uiHeightFrame1Time" type="ComboBoxFloat" width="130" height="30" pos="20,-390" value_increment="0.001" value_min="0" value_max="1" value_wrap="false" format_string="0.000"/>
+					<combobox name="uiHeightFrame1Value" type="ComboBoxFloat" width="130" height="30" pos="150,-390" value_increment="0.001" value_min="0" value_max="1" value_wrap="false" format_string="0.000"/>
+					<combobox name="uiHeightFrame2Time" type="ComboBoxFloat" width="130" height="30" pos="20,-420" value_increment="0.001" value_min="0" value_max="1" value_wrap="false" format_string="0.000"/>
+					<combobox name="uiHeightFrame2Value" type="ComboBoxFloat" width="130" height="30" pos="150,-420" value_increment="0.001" value_min="0" value_max="1" value_wrap="false" format_string="0.000"/>
+					<combobox name="uiHeightFrame3Time" type="ComboBoxFloat" width="130" height="30" pos="20,-450" value_increment="0.001" value_min="0" value_max="1" value_wrap="false" format_string="0.000"/>
+					<combobox name="uiHeightFrame3Value" type="ComboBoxFloat" width="130" height="30" pos="150,-450" value_increment="0.001" value_min="0" value_max="1" value_wrap="false" format_string="0.000"/>
+					<combobox name="uiHeightFrame4Time" type="ComboBoxFloat" width="130" height="30" pos="20,-480" value_increment="0.001" value_min="0" value_max="1" value_wrap="false" format_string="0.000"/>
+					<combobox name="uiHeightFrame4Value" type="ComboBoxFloat" width="130" height="30" pos="150,-480" value_increment="0.001" value_min="0" value_max="1" value_wrap="false" format_string="0.000"/>
+
+					<combobox name="uiTexIdx" type="ComboBoxInt" width="200" height="30" pos="80,-510" value_increment="1" value_min="0" value_max="31" value_wrap="false" format_string="0"/>
+					<combobox name="uiUvScaleX" type="ComboBoxFloat" width="130" height="30" pos="20,-540" value_increment="0.01" value_min="-4" value_max="8" value_wrap="false" format_string="0.00"/>
+					<combobox name="uiUvScaleY" type="ComboBoxFloat" width="130" height="30" pos="150,-540" value_increment="0.01" value_min="-4" value_max="8" value_wrap="false" format_string="0.00"/>
+					<combobox name="uiMetallic" type="ComboBoxFloat" width="130" height="30" pos="150,-570" value_increment="0.01" value_min="0" value_max="1" value_wrap="false" format_string="0.00"/>
+					<combobox name="uiSmoothness" type="ComboBoxFloat" width="130" height="30" pos="150,-600" value_increment="0.01" value_min="-1" value_max="1" value_wrap="false" format_string="0.00"/>
+				</rect>
+			</grid>
+		</window>
+	</append>
+</configs>
