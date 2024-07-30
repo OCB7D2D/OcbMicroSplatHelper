@@ -229,8 +229,6 @@ public class XUiC_MicroSplatLayer : XUiControllerOcb
         // VoxelMeshTerrainProcParamTex.Set(null, paramTex);
         // mesh.materialDistant.SetTexture("_ProcTexCurves", curveTex);
         // mesh.materialDistant.SetTexture("_ProcTexParams", paramTex);
-        // mesh.material.SetTexture("_ProcTexCurves", null);
-        // mesh.material.SetTexture("_ProcTexParams", null);
         // mesh.material.SetTexture("_ProcTexCurves", curveTex);
         // mesh.material.SetTexture("_ProcTexParams", paramTex);
 

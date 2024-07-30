@@ -74,12 +74,12 @@ public class MicroSplatHelperCmd : ConsoleCmdAbstract
     // ####################################################################
     // ####################################################################
 
-    protected override string[] getCommands()
+    public override string[] getCommands()
     {
         return new string[] { "msph" };
     }
 
-    protected override string getDescription()
+    public override string getDescription()
     {
         return "OCB microsplat WYSIWYG configurator";
     }

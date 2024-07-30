@@ -1,4 +1,4 @@
-# OCB MicroSplat Helper Mod  - 7 Days to Die (A21) Addon
+# OCB MicroSplat Helper Mod  - 7 Days to Die (V1.0) Addon
 
 Helper Mod for OCB MicroSplat or vanilla MicroSplat.  
 Adds WYSIWYG windows to edit layers or shader settings.
@@ -35,13 +35,13 @@ Requires OcbMicroSplat to load and re-use them again!
 
 ## Changelog
 
+### Version 0.2.0
+
+- Compatibility with V1.0 (b333)
+
 ### Version 0.1.0
 
 - Initial version
-
-## Compatibility
-
-Developed initially for a21.1(b6), updated through A21.2(b14).
 
 [1]: https://github.com/OCB7D2D/OcbMicroSplatHelper
 [2]: https://github.com/OCB7D2D/OcbMicroSplatHelper/releases
