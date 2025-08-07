@@ -35,6 +35,10 @@ Requires OcbMicroSplat to load and re-use them again!
 
 ## Changelog
 
+### Version 0.2.1
+
+- Compatibility with V2.1 stable
+
 ### Version 0.2.0
 
 - Compatibility with V1.0 (b333)
